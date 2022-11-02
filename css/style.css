@@ -1,0 +1,846 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+li{
+    list-style-type: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+body{
+  overflow-x: hidden;
+}
+.headercontainer{
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 18px;
+     transition: .6s ease;
+}
+.scrollheader{
+    z-index: 999;
+    position: fixed;
+    box-shadow: 0 0 10px rgb(169, 171, 171);
+}
+.headercontainer .logo{
+  width: 15vw;
+  transform: translateX(10vw);
+}
+.headercontainer .logo a{
+    font-size: 2vw;
+    color: rgb(6, 21, 59);
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+}
+.headercontainer .logo a span{
+    color: rgb(219, 185, 50);
+}
+
+.headercontainer .navbar ,.nav, .list{
+    width: 50vw;
+}
+.headercontainer .navbar .nav .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headercontainer .navbar .nav .list li{
+  padding: .8vw;
+}
+.headercontainer .navbar .nav .list li a{
+    text-transform: capitalize;
+    color: rgb(45, 44, 47);
+    font-size: 1.4vw;
+    font-weight: bold;
+    transition: .5s ease;
+}
+.headercontainer .navbar .nav .list li a:hover{
+    background-color: rgb(201, 171, 53);
+    border-radius: 10px;
+    padding: 1vw;
+    color: white;
+}
+.headercontainer .login2{
+    width: 15vw; 
+    padding: 5px;
+}
+.headercontainer .login2 h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    color:rgb(29, 27, 27);
+    background-color:rgb(219, 195, 99);
+    width: 7vw;
+    font-size: 1.4vw;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.headercontainer .login2 h3:hover{
+    background-color:rgb(196, 163, 33);
+    color: white;
+}
+/* start of home section */
+ .home{
+    width:100vw;
+    height:100vh;
+    transform: translateY(80px);
+ }
+ .home .container{
+   width: 100vw;
+    height:100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+ .home .container h2{
+    text-transform: capitalize;
+    font-size: 8vw;
+    color: rgb(10, 7, 81);
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    transition: .6s ease;
+    transform: translateY(-50px);
+ }
+.home .container button.btnexplore{
+    background-color: rgb(243, 219, 140);
+    color: rgb(4, 7, 77);
+    border: none;
+    padding: .9vw 2vw;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transform: translateY(-15px);
+    transition: .5s ease;
+}
+.home .container button.btnexplore:hover{
+    background-color: rgb(226, 191, 77);
+}
+
+ 
+
+/* end of home section */
+
+
+/* start of login section */
+  .login{
+    position: absolute;
+    top: -100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color:white;
+    opacity:.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: 1s ease;
+  }
+  .login .container{
+    width:30%;
+    background-color:white;
+    padding: 2.5vw 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; 
+    box-shadow: 20px 20px 10px rgb(195, 189, 189),-10px -10px 10px rgb(195, 189, 189);
+    border-radius: 10px;
+  }
+  .login .container h4{
+     text-align: center;
+     text-transform: capitalize;
+     font-size: 2vw;
+  }
+  .login .container input.username ,input.password{
+      width: 90%;
+      height:30px;
+    border:1px solid rgb(203, 207, 207);
+    outline: none;
+    border-radius:5px;
+    padding: 8px;
+  }
+  .login .container p{
+    color: rgb(128, 133, 137);
+    text-transform: capitalize;
+  }
+  .login .container p span{
+    color: rgb(233, 199, 77);
+    text-decoration: underline;
+  }
+
+  .login .container input.btnlogin{
+    width: 90%;
+    height:30px;
+   border:none;
+   outline: none;
+  border-radius:5px;
+   padding: 8px; 
+   background-color: rgb(228, 192, 108);
+   color: rgb(12, 25, 92);
+   font-size:1.5vw;
+   cursor: pointer;
+   transition: .5s ease;
+  }
+  .login .container input.btnlogin:hover{
+   background-color: rgb(234, 176, 39);
+   padding: 10px;
+  }
+  
+  .login .container .otheracount{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding: 10px;
+  }
+  .login .container .otheracount input{
+      width: 30%;
+      padding: 6px;
+      color: rgb(8, 8, 43);
+      background-color: rgb(236, 193, 108);
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      transition: .5s ease;
+      cursor: pointer;
+  }
+  .login .container .otheracount input:hover{
+    background-color: rgb(229, 175, 66);
+    color: white;
+    padding: 8px;
+  }
+  .login .closeicon{
+    transform: translate(60vw,-20vw);
+  }
+  .login .closeicon i{
+    font-size:3vw;
+    font-weight: bold;
+    color: rgb(10, 10, 83);
+    cursor: pointer;
+  }
+/* end of login section */
+/* start of slide section */
+   .slidecontainer{
+    width: 100vw;
+    max-height: 100vh;
+    background-color: rgb(241, 244, 247);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    gap:50px;
+   }
+   .slidecontainer .info{
+    width: 250px;
+    height: 72%;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow:10px 10px 10px rgb(233, 239, 239),-10px -10px 10px rgb(233, 239, 239);
+    transition: .6s ease;
+   }
+   .slidecontainer .info .iconinfo{
+     width:40px;
+     height: 40px;
+    background-color: rgb(213, 218, 221);
+    border-radius: 50%;
+    padding: 11px;
+   }
+   .slidecontainer .info .iconinfo i{
+    font-size: 1.6rem;
+   }
+   .slidecontainer .info .infotext{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transform: translateX(2rem);
+   }
+   .slidecontainer .info .infotext span.num{
+       color: rgb(234, 186, 90);
+       font-weight: bold;
+       font-size: 20px;
+   }
+   .slidecontainer .info .infotext span.text{
+    text-transform: capitalize;
+   }
+
+
+/* end of slide section */
+/* start cars section */
+.cars{
+  width: 100%;
+  height:100vh;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.cars .heading h3{
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(5, 8, 45);
+  position: relative;
+}
+.cars .heading h3::after{
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 4px;
+  background-color: rgb(214, 175, 85);
+   right:0px;
+  bottom: 3px;
+}
+.swiper {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content:center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+.swiper-slide .carinfo{
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.swiper-slide .carinfo h3{
+  text-transform: capitalize;
+  font-size: 25px;
+  color: rgb(9, 6, 53);
+  font-weight: bold;
+}
+.swiper-slide .carinfo p{
+  text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(9, 6, 53);
+}
+.swiper-slide .carinfo p span{
+  color: rgb(218, 183, 93);
+  font-weight: bold;
+  font-size: 25px;
+}
+.swiper-slide .carinfo button{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: rgb(212, 186, 57);
+  color: rgb(6, 19, 51);
+  text-transform: capitalize;
+  font-size:1rem;
+  transition: .5s ease-in-out;
+}
+.swiper-slide .carinfo button:hover{
+  color: white;
+  padding: 12px;
+}
+.swiper-slide img {
+  display: block;
+  width:60%;
+  /* height:50%; */
+  /* object-fit: cover; */
+}
+ /* end cars section */
+ /* start of services section */
+   .services{
+     width:100%;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   .services .heading h3,.shop .heading h3,.review .heading h3{
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(5, 8, 45);
+    position: relative;
+   }
+   .services .heading h3::after,.shop .heading h3::after,.review .heading h3::after{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 4px;
+    background-color: rgb(214, 175, 85);
+     right:0px;
+    bottom: 3px;
+  }
+  .services .servicescontainer{
+      width: 80%;
+      margin: auto;
+      display:flex;
+      flex-wrap:wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding:50px 0px;
+  }
+  .services .servicescontainer .service{
+    width: 220px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(226, 232, 232, 0.4),
+    -10px -10px 10px rgba(226, 232, 232, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+  }
+  .services .servicescontainer .service:hover{
+    background-color: rgb(19, 22, 104);
+  }
+  .services .servicescontainer .service:hover p{
+    color: #fff;
+  }
+  .services .servicescontainer .service:hover h3{
+    color: #fff;
+  }
+  .services .servicescontainer .service .icon{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: rgb(221, 175, 23);
+    padding:15px;
+  }
+  .services .servicescontainer .service .icon i{
+    font-size: 20px;
+  }
+  .services .servicescontainer .service h3{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(10, 14, 66);
+    margin: 10px 0px;
+  }
+  .services .servicescontainer .service p{
+    text-transform: capitalize;
+    font-size: 15px;
+    color: rgb(170, 165, 165);
+    line-height: 20px;
+  }
+  .services .servicescontainer .service button{
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    background-color: rgb(219, 167, 77);
+    color: rgb(11, 12, 63);
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+  
+ /* end of services section */
+ /* satrt of shop section */
+    .shop{
+     width: 100%;
+     background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-direction: column;
+    }
+    .shop .shopcontainer{
+      width: 90%;
+      margin: auto;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .shop .shopcontainer .car{
+      width:300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 7px;
+      box-shadow: 10px 10px 10px rgb(224, 230, 230),
+      -10px -10px 10px rgb(224, 230, 230);
+    }
+    .shop .shopcontainer .car img{
+      width: 90%;
+      transition: .5s ease-in-out;
+    }
+    .shop .shopcontainer .car:hover img{
+      transform: scale(.8,.8);
+    
+    }
+    .shop .shopcontainer .car h3,.shop .shopcontainer .car h5{
+      color: rgb(3, 14, 43);
+      text-transform: capitalize;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .shop .shopcontainer .car h3 span,.shop .shopcontainer .car h5 span{
+      color: rgb(201, 162, 72);
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 10px;
+      
+    }
+    .shop .shopcontainer .car .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .shop .shopcontainer .car .btn .card,.shop .shopcontainer .car .btn .buy{
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(205, 180, 80);
+        padding: 10px 15px;
+        color: white;
+        text-transform: capitalize;
+        transition: .6s ease-in-out;
+    }
+    .shop .shopcontainer .car .btn .card:hover,.shop .shopcontainer .car .btn .buy:hover{
+      transform: scale(.8,.8);
+    } 
+    
+ /* end of shop section */
+ /* start of subscribe section */
+
+ .subscribe{
+  width: 100%;
+  min-height: 250px;
+  background-image: url(/image/letter-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+ }
+ .subscribe .subscribecontainer{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+ }
+ .subscribe .subscribecontainer h2{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(9, 5, 75);
+ }
+ .subscribe .subscribecontainer p{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(158, 158, 165);
+}
+.subscribe .subscribecontainer .input{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe .subscribecontainer .input .email {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    outline: none;
+    width: 50%;
+    height: 40px;
+    border: none;
+    padding-left:20px;
+    box-shadow: 20px 20px 20px rgb(219, 225, 225);
+    font-size: 16px;
+}
+.subscribe .subscribecontainer .input .btn {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  outline: none;
+  width: 15%;
+  height: 40px;
+  border: none;
+  padding-left:20px;
+  text-align: center;
+  box-shadow: 20px 20px 20px rgb(219, 225, 225);
+  font-size:1rem;
+  background-color: rgb(224, 203, 66);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: .6s ease-in-out;
+}
+.subscribe .subscribecontainer .input .btn:hover{
+  background-color: rgb(187, 167, 36); 
+}
+ /* end of subscribe section */
+
+ /* start of review section */
+ .review{
+  width:100%;
+   min-height:400px;
+  background-color: #fff;
+  padding: 50px;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+ }
+ .review .reviewcontainer{
+  width:80%;
+  height: 100%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 100px;
+  position: relative;
+ }
+ .review .reviewcontainer .client{
+    width: 320px;
+    border-radius:5px;
+   box-shadow: 10px 10px 10px rgb(222, 230, 230),-10px -10px 10px rgb(222, 230, 230);
+   background-color: #fff;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   padding:20px 10px;
+   position: absolute;
+   transition: 3s ease-in-out;
+ } 
+ .review .reviewcontainer .client .star i{
+  color: rgb(221, 194, 77);
+  font-size: 20px;
+ }
+   .animaton{
+      animation: move 3s ease-in-out backwards;
+   }
+   @keyframes move{
+   0%{
+    transform: translateX(50px);
+   }
+   50%{
+    transform: translateX(150px);
+   }
+   100%{
+    transform: translateX(300px);
+    opacity: 0;
+   }
+   }
+ .review .reviewcontainer .client .img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ }
+ /* end of review section */
+ /* start of contact section */
+ .contact{
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px;
+ }
+ .contact .heading{
+  text-transform: capitalize;
+  color: rgb(2, 21, 52);
+  font-size: 30px;
+ }
+ .contact .contactcontainer{
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+ }
+ .contact .contactcontainer .form{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:aliceblue;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 5px;
+ }
+ .contact .contactcontainer .form h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(6, 6, 59);
+ }
+ .contact .contactcontainer .form form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 3px;
+ }
+ .contact .contactcontainer .form form input{
+  width: 90%;
+  height: 30px;
+  border: 1px solid rgb(230, 238, 238);
+  outline: none;
+  border-radius: 3px;
+  padding: 4px;
+ }
+ .contact .contactcontainer .form form textarea{
+  width: 90%;
+  height: 120px;
+  border: 1px solid rgb(230, 238, 238);
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+  padding: 4px;
+ }
+ .contact .contactcontainer .form form input.btn{
+   width:20%;
+   background-color:rgb(237, 227, 114);
+   color: white;
+   border-radius: 2px;
+   padding: 3px;
+   transition: 1s ease-in-out;
+ }
+ .contact .contactcontainer .form form input.btn:hover{
+   background-color:rgb(210, 193, 3);
+   color: rgb(59, 41, 106);
+ }
+ .contact .contactcontainer .map{
+  width: 45%;
+  min-height: 100%;
+  background-color: rgb(40, 91, 143);
+  border-radius: 10px;
+ }
+
+ /* end of contact section */
+
+ /* start of footer */
+ footer.footer{
+  width: 100%;
+ min-height: 100%;
+ background-color: rgb(240, 207, 64);
+ }
+ .footer .container{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+ }
+ .footer .container .owner{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  border-bottom: 2px solid rgb(158, 158, 162);
+ }
+ .footer .container .owner .info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+ .footer .container .owner .info h3{
+    text-transform: capitalize;
+    color: rgb(3, 3, 34);
+    font-size: 25px;
+ }
+ .footer .container .owner .info .links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  flex-direction: column;
+ }
+ .footer .container .owner .info a{
+  color: rgb(12, 12, 47);
+  font-size: 15px;
+  padding:3px;
+  transition: .3s ease;
+ }
+ .footer .container .owner .info a:hover{
+  padding-left: 10px;
+ }
+
+ .footer .container .developer{
+  width:90%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+ }
+ .footer .container .developer .msg strong{
+    font-size: 30px;
+    color: rgb(5, 5, 32);
+    text-transform: capitalize;
+ }
+ .footer .container .developer .infolinks{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: nowrap;
+   
+ }
+ .footer .container .developer .infolinks a{
+  padding: 3px;
+  color: rgb(5, 5, 32);
+  transition: .5s ease;
+ }
+ 
+
+ /* end of footer */
